@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Four-Handed Salute Emoji</title>
+    <style>
+        body {
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .emoji-container {
+            position: relative;
+            width: 60px;
+            height: 60px;
+        }
+
+        .salute-emoji {
+            font-size: 48px;
+            position: absolute;
+        }
+
+        .salute-emoji:nth-child(2) {
+            transform: translateY(-3px) rotate(90deg);
+        }
+
+        .salute-emoji:nth-child(3) {
+            transform: translateY(3px) rotate(180deg);
+        }
+
+        .salute-emoji:nth-child(4) {
+            transform: translateY(3px) rotate(270deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="emoji-container">
+        <span class="salute-emoji">🫡</span>
+        <span class="salute-emoji">🫡</span>
+        <span class="salute-emoji">🫡</span>
+        <span class="salute-emoji">🫡</span>
+    </div>
+</body>
+</html>

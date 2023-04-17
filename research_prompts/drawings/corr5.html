@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Four-Handed Salute Emoji</title>
+    <style>
+        body {
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .emoji-container {
+            display: grid;
+            place-items: center;
+            position: relative;
+            width: 100px;
+            height: 100px;
+        }
+
+        .salute-emoji {
+            font-size: 48px;
+        }
+
+        .salute-emoji:nth-child(2) {
+            transform: translate(-3px, -3px) rotate(90deg);
+            animation-duration: 0.75s;
+        }
+
+        .salute-emoji:nth-child(3) {
+            transform: translate(-3px, 3px) rotate(180deg);
+            animation-duration: 1s;
+            animation-delay: 0.25s;
+        }
+
+        .salute-emoji:nth-child(4) {
+            transform: translate(3px, 3px) rotate(270deg);
+            animation-duration: 1.25s;
+            animation-delay: 0.5s;
+        }
+
+        .salute-emoji:nth-child(5) {
+            font-size: 0;
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .spin {
+            animation-name: spin;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="emoji-container">
+        <span class="salute-emoji spin">🫡</span>
+        <span class="salute-emoji spin">🫡</span>
+        <span class="salute-emoji spin">🫡</span>
+        <span class="salute-emoji spin">🫡</span>
+        <span class="salute-emoji"></span>
+    </div>
+</body>
+</html>

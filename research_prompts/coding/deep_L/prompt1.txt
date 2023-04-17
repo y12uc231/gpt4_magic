@@ -1,0 +1,12 @@
+I want to write a customized optimizer in pytorch, the optimizer should do:
+1. the parameters for the optimizer is learning rate, momentum ,weigth decay, d_dim, k and factor alpha
+2. the optimizer goes through each parameter in the network, and then
+-- Get the gradient of this parameter, reshape it to 2D by looping through the dimensions, and keeping the dimension whose actual
+dimension (shape) is equal to d_dim, do an SVD decomposition of the parameter so W = U\Sigma V.
+-- Keep the top k singular vectors of W, so we get a new matrix W_k = U \Sigma_k V.
+-- Keep the top 2k singular vectors of W, so we get a new matrix W_{2k} = U \Sigma_{2k} V.
+-- Normalize W_k according to the momentum of the F-norm of W_{2k}.
+-- Truncate each coordinate of W_k to the top alpha percentile of all the coordinates, in absolute value.
+-- Apply momentum on W_k, and then update the network parameters using this momentum.
+-- Apply weight decay.
+
